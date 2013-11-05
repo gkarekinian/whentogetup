@@ -1,11 +1,23 @@
 (function() {
+  var TIME_TO_FALL_ASLEEP_IN_MINUTES = 14;
+  var SLEEP_CYCLE_IN_MINUTES         = 90;
+  var MILLISECONDS_IN_A_MINUTE       = 60000;
+
   var now = function() {
     return new Date();
   }
 
   var calculateTime = function(cycles) {
-    return new Date(now().getTime() + (14 + 90 * cycles) * 60000);
+    return new Date(
+      now().getTime() +
+      minutesToMilliseconds(TIME_TO_FALL_ASLEEP_IN_MINUTES +
+                            SLEEP_CYCLE_IN_MINUTES * cycles)
+    );
   };
+
+  var minutesToMilliseconds = function(minutes) {
+    return minutes * MILLISECONDS_IN_A_MINUTE;
+  }
 
   var toTwoDigits = function(v) {
     if (v < 10) {

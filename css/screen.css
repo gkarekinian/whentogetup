@@ -1,0 +1,30 @@
+#whentogetup{
+	font-family: helvetica, arial, sans-serif;
+	background: #fff;
+	color: #333;
+	text-align: center;
+}
+#whentogetup li{
+	list-style: none;
+	padding: 1em;
+	margin: 1em 0.3em;
+	font-size: 20pt;
+	display: inline-block;
+	background: #ccc;
+	color: #666;
+	-webkit-transition: ;
+	-webkit-transition: color 0.5s linear, background 0.5s linear;
+}
+
+#whentogetup li:hover {
+	background: #000;
+	color: #fff;
+}
+
+#whentogetup ul{
+	margin: 0;
+	padding: 0;
+}
+#whentogetup h1{
+	font-size: 2em;
+}

@@ -7,7 +7,7 @@
     return new Date(now().getTime() + (14 + 90 * cycles) * 60000);
   };
 
-  var toTwoDidgets = function(v) {
+  var toTwoDigits = function(v) {
     if (v < 10) {
       return "0" + v;
     } else {
@@ -16,7 +16,7 @@
   }
 
   var formatDate = function(date) {
-    return toTwoDidgets(date.getHours()) + ":" + toTwoDidgets(date.getMinutes());
+    return toTwoDigits(date.getHours()) + ":" + toTwoDigits(date.getMinutes());
   };
 
   var updateTimes = function() {

@@ -32,11 +32,11 @@
   };
 
   var updateTimes = function() {
-    var i, element;
-    for (i = 2; i <=7; i = i + 1) {
-      element = document.getElementById("result-with-" + i + "-cycles");
+    var cycles, element;
+    for (cycles = 2; cycles <= 7; cycles = cycles + 1) {
+      element = document.getElementById("result-with-" + cycles + "-cycles");
       if (element) {
-        element.innerHTML = formatDate(calculateTime(i));
+        element.innerHTML = formatDate(calculateTime(cycles));
       }
     }
     document.getElementById("now").innerHTML = formatDate(now());
